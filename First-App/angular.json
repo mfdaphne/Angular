@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "First-App"
+  "defaultProject": "First-App",
+  "cli": {
+    "analytics": false
+  }
 }
