@@ -7,7 +7,8 @@ import {Recipe} from '../recipe.model'
 })
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
-    new Recipe('Cake Recipe','Mix batter', 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/carrot-cake-f1b3d0c.jpg')
+    new Recipe('Chocolate Cake Recipe','Mix batter', 'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/carrot-cake-f1b3d0c.jpg')
+   
   ];
 
   constructor() { }
