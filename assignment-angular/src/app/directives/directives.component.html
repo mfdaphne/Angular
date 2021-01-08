@@ -1,0 +1,19 @@
+<h3><nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item inactive" aria-current="page">Assignment-3 (Directives)</li>
+    </ol>
+  </nav>
+</h3>
+<button type="button" 
+(click) = "onClickDisplayDetails()"
+class="btn btn-success">Display Details</button>
+<blockquote class="blockquote">
+    <p class="text-info" *ngIf="toggle">This is directive Assignment. This has secret password = tuna.
+    </p>
+    <div>
+    <p *ngFor = "let click of countClicks"
+    [ngStyle] = "{backgroundColor : click>=5 ? 'blue':'transparent'}"
+    [ngClass] = "{countColor: click>=5}">{{click}}</p>
+</div>
+</blockquote>
+

@@ -1,0 +1,17 @@
+<h3><nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item inactive" aria-current="page">Assignment-2 (data-binding)</li>
+    </ol>
+  </nav>
+</h3>
+
+<input 
+type="text" 
+[(ngModel)] = "username">
+
+<p> {{username}}</p>
+
+<button type="button" 
+class="btn btn-primary btn-lg"
+[disabled] = "isUsernamePresent()"
+(click) = "resetUser()">Reset User</button>
