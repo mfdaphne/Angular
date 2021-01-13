@@ -121,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "cmp-service"
+  "defaultProject": "cmp-service",
+  "cli": {
+    "analytics": false
+  }
 }
