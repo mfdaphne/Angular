@@ -11,6 +11,10 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { GameControlComponent } from './property-binding/game-control/game-control.component';
 import { EvenComponent } from './property-binding/even/even.component';
 import { OddComponent } from './property-binding/odd/odd.component';
+import { ServicesComponent } from './services/services.component';
+import { ActiveUsersComponent } from './services/active-users/active-users.component';
+import { InactiveUsersComponent } from './services/inactive-users/inactive-users.component';
+import { CounterService } from './services/counter-service.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { OddComponent } from './property-binding/odd/odd.component';
     PropertyBindingComponent,
     GameControlComponent,
     EvenComponent,
-    OddComponent
+    OddComponent,
+    ServicesComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
 
 
   ],
@@ -30,7 +37,7 @@ import { OddComponent } from './property-binding/odd/odd.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
