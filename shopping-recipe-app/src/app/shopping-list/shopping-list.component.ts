@@ -14,12 +14,6 @@ ingredients: Ingredient[] = [];
 
   ngOnInit(): void {
     this.ingredients = this.shoppingListServiCe.getIngredients();
-
-    this.shoppingListServiCe.ingredientAdded.subscribe(
-      (ingredient: Ingredient) => {
-        this.ingredients.push(ingredient);
-      }
-    );
   }
 
 }
