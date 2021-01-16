@@ -1,7 +1,9 @@
-import { EventEmitter } from "@angular/core";
+import { EventEmitter, Injectable } from "@angular/core";
 import { Ingredient } from "../shared/ingredient.model";
+import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { Recipe } from "./recipe.model";
 
+@Injectable()
 export class RecipeService {
   selectedRecipe = new EventEmitter<Recipe>();
 
@@ -11,8 +13,8 @@ export class RecipeService {
       [new Ingredient('batter', 1),
       new Ingredient('egg', 2),
       new Ingredient('Vanilla Essense', 1)]),
-    new Recipe('Carrot Cake', 'Mix batter', 
-    'https://static01.nyt.com/images/2015/10/15/dining/15COOKING-CARROTCAKE/15COOKING-CARROTCAKE-articleLarge.jpg',
+    new Recipe('Carrot Cake', 'Mix batter',
+      'https://static01.nyt.com/images/2015/10/15/dining/15COOKING-CARROTCAKE/15COOKING-CARROTCAKE-articleLarge.jpg',
       [
         new Ingredient('Flour', 1),
         new Ingredient('Carrot', 5)
@@ -20,7 +22,14 @@ export class RecipeService {
 
   ];
 
+  constructor(private slService: ShoppingListService) {
+
+  }
   getRecipes() {
     return this.recipes.slice();
+  }
+
+  addIngredientsToShoppingList(ingredients: Ingredient[]) {
+    this.slService.getIngredients().push(...ingredients);
   }
 }
