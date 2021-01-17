@@ -12,9 +12,10 @@ import { FormsModule } from '@angular/forms';
 import { ServersService } from './servers/servers.service';
 import { RouterModule, Routes } from '@angular/router';
 
-const appRoutes: Routes = [{path: '', component: HomeComponent},
-  {path:'users', component:UsersComponent},
-{path:'servers', component: ServersComponent}];
+const appRoutes: Routes = [{ path: '', component: HomeComponent },
+{ path: 'users', component: UsersComponent },
+{ path: 'users/:id/:name', component: UserComponent },
+{ path: 'servers', component: ServersComponent }];
 
 @NgModule({
   declarations: [
