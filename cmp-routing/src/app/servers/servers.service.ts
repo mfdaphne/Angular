@@ -27,6 +27,7 @@ export class ServersService {
         return s.id === id;
       }
     );
+    console.log('SERVER found : ' + server.name + ' - ' + server.status);
     return server;
   }
 
