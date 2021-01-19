@@ -13,6 +13,7 @@ export class AuthService {
     }
 
     login() {
+        console.log('clicked True');
         this.canLogin = true;
     }
 
