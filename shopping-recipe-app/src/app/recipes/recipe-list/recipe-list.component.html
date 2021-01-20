@@ -1,16 +1,14 @@
 <br>
 <div class="row">
-    <div class="col-xs-12">
-        <button class="btn btn-success">New Recipe</button>
-    </div>
+  <div class="col-xs-12">
+    <button class="btn btn-success" [routerLink]="['/recipes/new']">New Recipe</button>
+  </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
     <hr>
-
-  <app-recipe-item *ngFor = "let recipe of recipes" 
-  [recipeItem]="recipe"
-  (readMoreRecipe)="onRecipeSelected(recipe)"></app-recipe-item>
-</div>
+    <app-recipe-item *ngFor="let recipe of recipes" [recipeItem]="recipe" (readMoreRecipe)="onRecipeSelected(recipe)">
+    </app-recipe-item>
+  </div>
 </div>
