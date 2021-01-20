@@ -1,1 +1,5 @@
 <p>User with <strong>ID {{ id }}</strong> was loaded</p>
+<hr>
+<h4 *ngIf="isActivated">This section is activated</h4>
+<hr>
+<button class="btn btn-sucess" (click)="onActivate()">Activate</button>
