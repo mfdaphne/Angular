@@ -1,4 +1,3 @@
-import { EventEmitter, OnInit } from "@angular/core";
 import { Ingredient } from "../shared/ingredient.model";
 
 export class ShoppingListService {
@@ -12,7 +11,7 @@ export class ShoppingListService {
     return this.ingredients;
   }
 
-  addIngredients(slIngredients : Ingredient[]){
+  addIngredients(slIngredients: Ingredient[]) {
     this.ingredients.push(...slIngredients);
   }
 
