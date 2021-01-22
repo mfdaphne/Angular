@@ -1,0 +1,45 @@
+<h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item inactive" aria-current="page">Assignment-6 (Forms)</li>
+        </ol>
+    </nav>
+</h3>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form (ngSubmit)='onSubmit()' #f="ngForm">
+                <div class="form-group">
+                    <label for="email">E-Mail</label>
+                    <input class="form-control" type="text" name="email" email ngModel required #email="ngModel">
+                    <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid Email!</span>
+                </div>
+                <div class="form-group">
+                    <label for="subscription">Subscriptions</label>
+                    <select id="subscription" class="form-control" [ngModel]="defaultSubscription" name="subscription">
+                        <option value="basic">Basic</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="pro">Pro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input class="form-control" type="password" name="password" ngModel required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" [disabled]="!f.valid" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12" *ngIf="isSubmitted">
+            <h4>You have entered below data : </h4>
+            <p>Email : {{formData.email}}</p>
+            <p>Subscription : {{formData.subscription}}</p>
+            <p>Password : {{formData.password}}</p>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { AssignmentSixFormsComponent } from "./assignment-six-forms/assignment-six-forms.component";
 import { DataBindingComponent } from "./data-binding/data-binding.component";
 import { DirectivesComponent } from "./directives/directives.component";
 import { HomeComponent } from "./home/home.component";
@@ -13,7 +14,8 @@ const appRoutes: Routes = [
     { path: 'assignment2', component: DataBindingComponent },
     { path: 'assignment3', component: DirectivesComponent },
     { path: 'assignment4', component: PropertyBindingComponent },
-    { path: 'assignment5', component: ServicesComponent }
+    { path: 'assignment5', component: ServicesComponent },
+    { path: 'assignment6', component: AssignmentSixFormsComponent }
 ]
 
 @NgModule({

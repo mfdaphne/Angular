@@ -18,6 +18,7 @@ import { CounterService } from './services/counter-service.service';
 import { HomeComponent } from './home/home.component';
 import { AppRouting } from './app-routing.module';
 import { DropdownDirective } from './shared/dropdown.directive';
+import { AssignmentSixFormsComponent } from './assignment-six-forms/assignment-six-forms.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DropdownDirective } from './shared/dropdown.directive';
     ActiveUsersComponent,
     InactiveUsersComponent,
     HomeComponent,
-    DropdownDirective
+    DropdownDirective,
+    AssignmentSixFormsComponent
 
 
   ],
