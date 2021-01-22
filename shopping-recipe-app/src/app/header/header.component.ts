@@ -1,4 +1,3 @@
-import { EventEmitter } from '@angular/core';
 import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
