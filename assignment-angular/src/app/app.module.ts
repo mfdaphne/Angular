@@ -15,6 +15,10 @@ import { ServicesComponent } from './services/services.component';
 import { ActiveUsersComponent } from './services/active-users/active-users.component';
 import { InactiveUsersComponent } from './services/inactive-users/inactive-users.component';
 import { CounterService } from './services/counter-service.service';
+import { HomeComponent } from './home/home.component';
+import { AppRouting } from './app-routing.module';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { AssignmentSixFormsComponent } from './assignment-six-forms/assignment-six-forms.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +33,17 @@ import { CounterService } from './services/counter-service.service';
     OddComponent,
     ServicesComponent,
     ActiveUsersComponent,
-    InactiveUsersComponent
+    InactiveUsersComponent,
+    HomeComponent,
+    DropdownDirective,
+    AssignmentSixFormsComponent
 
 
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRouting
   ],
   providers: [CounterService],
   bootstrap: [AppComponent]

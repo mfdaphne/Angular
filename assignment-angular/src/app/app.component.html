@@ -1,28 +1,8 @@
+<app-home></app-home>
 <div class="container">
 	<div class="row">
-		<div class="col-md-8">
-			<div class="page-header">
-				<h2>
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-						  <li class="breadcrumb-item active" aria-current="page">Assignments</li>
-						</ol>
-					  </nav>
-        		</h2>
-        <app-success-alert></app-success-alert>
-		<app-warning-alert></app-warning-alert>
-		<hr>
-		<app-data-binding></app-data-binding>
-
-		<hr>
-		<app-directives></app-directives>
-
-		<hr>
-		<app-property-binding></app-property-binding>
-
-		<hr>
-		<app-services></app-services>
-			</div>
+		<div class="col-md-12">
+			<router-outlet></router-outlet>
 		</div>
 	</div>
 </div>
