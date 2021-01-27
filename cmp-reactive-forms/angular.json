@@ -121,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "cmp-reactive-forms"
+  "defaultProject": "cmp-reactive-forms",
+  "cli": {
+    "analytics": false
+  }
 }
