@@ -9,13 +9,14 @@ import { EmailValidator, FormArray, FormControl, FormGroup, Validators } from '@
 export class AppComponent implements OnInit {
 
   genders = ['male', 'female'];
+  forbiddenUsername = ['Mr', 'Miss'];
   signUpForm: FormGroup;
 
   ngOnInit(): void {
     this.signUpForm = new FormGroup({
       'userData': new FormGroup(
         {
-          'username': new FormControl(null, Validators.required),
+          'username': new FormControl(null, [Validators.required, this.forbiddenNames.bind(this)]),
           'email': new FormControl(null, [Validators.required, Validators.email])
         }
       ),
@@ -37,5 +38,12 @@ export class AppComponent implements OnInit {
 
   getHobbies() {
     return (this.signUpForm.get('hobbies') as FormArray).controls;
+  }
+
+  forbiddenNames(control: FormControl): { [s: string]: boolean } {
+    if (this.forbiddenUsername.indexOf(control.value) != -1) {
+      return { 'nameIsForbidden': true };
+    }
+    return null;
   }
 }
