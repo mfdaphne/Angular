@@ -1,0 +1,65 @@
+<h3>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item inactive" aria-current="page">Assignment-7 (Reactive Forms)</li>
+        </ol>
+    </nav>
+</h3>
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6">
+            <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+                <div formGroupName="projectData">
+                    <div class="form-group">
+                        <label for="projectName">Project Name</label>
+                        <input type="text" class="form-control" id="projectName" formControlName="projectName">
+
+                        <span class="help-block" *ngIf="!projectForm.get('projectData.projectName').valid && 
+                            projectForm.get('projectData.projectName').touched">
+                            <span *ngIf="projectForm.get('projectData.projectName').errors['nameIsForbidden']">This name
+                                is invalid</span>
+                            <span *ngIf="projectForm.get('projectData.projectName').errors['required']">Project name is
+                                required !</span>
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" formControlName="email">
+                        <span class="help-block"
+                            *ngIf="!projectForm.get('projectData.email').valid && projectForm.get('projectData.email').touched">
+                            Enter valid email!
+                        </span>
+                    </div>
+                </div>
+                <div class="radio" *ngFor="let status of projectStatus">
+                    <label>
+                        <input type="radio" [value]="status" formControlName="projectStatus">{{status}}</label>
+
+                </div>
+
+                <br>
+                <button class="btn btn-primary">Submit</button>
+
+
+            </form>
+            <div *ngIf="viewSubmit">
+                <br>
+                <label>
+                    Project Name : {{pName}}
+                </label>
+                <br>
+                <label>
+                    Email : {{pEmail}}
+                </label>
+                <br>
+                <label>
+                    Status : {{pStatus}}
+                </label>
+            </div>
+
+
+        </div>
+    </div>
+</div>
